@@ -85,7 +85,7 @@ def check_afk(bot, update, user_id, fst_name):
     if sql.is_afk(user_id):
         user = sql.check_afk_status(user_id)
         if not user.reason:
-            res = tld(chat.id, f"{fst_name} Sedang Off!")
+            res = tld(chat.id, f"{fst_name} Telah Kembali!")
         else:
             res = tld(chat.id, f"{fst_name} Telah Kembali! Karena:\n{user.reason}")
         update.effective_message.reply_text(res)
